@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainPage"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background_overlay"
+        android:scaleType="centerCrop"/>
+
+    <View
+        android:id="@+id/v_oval"
+        android:layout_width="@dimen/width_v_oval_about"
+        android:layout_height="@dimen/height_v_oval_about"
+        android:background="@drawable/start_selector"
+        android:clickable="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/v_oval_about"
+        android:onClick="startClick"/>
+
+    <View
+        android:id="@+id/v_oval_about"
+        android:layout_width="@dimen/width_v_oval_about"
+        android:layout_height="@dimen/height_v_oval_about"
+        android:background="@drawable/start_selector"
+        android:clickable="true"
+        app:layout_constraintTop_toBottomOf="@id/v_oval"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="aboutClick"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="@+id/v_oval_about"
+        app:layout_constraintStart_toStartOf="@+id/v_oval_about"
+        app:layout_constraintEnd_toEndOf="@+id/v_oval_about"
+        app:layout_constraintBottom_toBottomOf="@+id/v_oval_about"
+        android:text="ABOUT"
+        android:textSize="@dimen/text_main_buttons"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="@+id/v_oval"
+        app:layout_constraintStart_toStartOf="@+id/v_oval"
+        app:layout_constraintEnd_toEndOf="@+id/v_oval"
+        app:layout_constraintBottom_toBottomOf="@+id/v_oval"
+        android:text="START"
+        android:textSize="@dimen/text_main_buttons"
+        android:textColor="@color/white"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Quiz"
+    android:background="@color/colorPrimary">
+
+    <View
+        android:id="@+id/v_top_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_5sdp"
+        android:background="@color/darkerBlue"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/v_top_line"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_main_buttons"
+        android:text="Musicals And Theatres"/>
+
+    <View
+        android:id="@+id/v_bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_5sdp"
+        android:background="@color/darkerBlue"
+        android:layout_marginTop="@dimen/margin_medium"
+        app:layout_constraintTop_toBottomOf="@id/tv_category"/>
+
+    <TextView
+        android:id="@+id/tv_hearts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/v_bottom_line"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="\u2764\u2764\u2764"
+        android:textSize="@dimen/_25ssp"
+        android:textColor="@color/red"/>
+
+    <TextView
+        android:id="@+id/tv_question_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/tv_hearts"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textColor="@color/white"
+        android:text="0 / 20"
+        android:textSize="@dimen/_20ssp"/>
+
+    <TextView
+        android:id="@+id/tv_score_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_hearts"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:text="Score: "
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20ssp"/>
+
+    <TextView
+        android:id="@+id/tv_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tv_score_text"
+        app:layout_constraintLeft_toRightOf="@id/tv_score_text"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20ssp"
+        android:text="0"/>
+
+    <TextView
+        android:id="@+id/tv_timer_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tv_score_text"
+        app:layout_constraintRight_toLeftOf="@id/tv_timer"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20ssp"
+        android:text="Timer: "/>
+
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tv_timer_text"
+        app:layout_constraintBottom_toBottomOf="@id/tv_timer_text"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20ssp"
+        android:background="@drawable/oval"
+        android:padding="@dimen/padding_small"
+        android:text="20"/>
+
+    <TextView
+        android:id="@+id/tv_question"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:padding="@dimen/padding_small"
+        app:layout_constraintTop_toBottomOf="@id/tv_score_text"
+        android:text="loading..."
+        android:textSize="@dimen/_15ssp"
+        android:background="#77000000"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/tv_choice1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_question"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tv_choice2"
+        app:layout_constraintBottom_toTopOf="@id/tv_choice3"
+        android:clickable="true"
+        android:background="@drawable/choice_selector"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:text="loading..."
+        android:textSize="@dimen/text_choice"
+        android:textColor="@color/white"
+        android:onClick="choiceClick"/>
+
+    <TextView
+        android:id="@+id/tv_choice2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/tv_choice1"
+        app:layout_constraintLeft_toRightOf="@id/tv_choice1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tv_choice1"
+        android:clickable="true"
+        android:layout_marginStart="@dimen/margin_small"
+        android:background="@drawable/choice_selector"
+        android:gravity="center"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:text="loading..."
+        android:textSize="@dimen/text_choice"
+        android:textColor="@color/white"
+        android:onClick="choiceClick"/>
+
+    <TextView
+        android:id="@+id/tv_choice3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_choice1"
+        app:layout_constraintLeft_toLeftOf="@id/tv_choice1"
+        app:layout_constraintRight_toRightOf="@+id/tv_choice1"
+        app:layout_constraintBottom_toTopOf="@id/adView"
+        android:clickable="true"
+        android:background="@drawable/choice_selector"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/margin4"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="loading..."
+        android:textSize="@dimen/text_choice"
+        android:textColor="@color/white"
+        android:onClick="choiceClick"/>
+
+    <TextView
+        android:id="@+id/tv_choice4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/tv_choice3"
+        app:layout_constraintLeft_toLeftOf="@id/tv_choice2"
+        app:layout_constraintRight_toRightOf="@id/tv_choice2"
+        app:layout_constraintBottom_toBottomOf="@id/tv_choice3"
+        android:clickable="true"
+        android:background="@drawable/choice_selector"
+        android:gravity="center"
+        android:text="loading..."
+        android:textSize="@dimen/text_choice"
+        android:textColor="@color/white"
+        android:onClick="choiceClick"/>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

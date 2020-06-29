@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="width_iv_challenge">@dimen/_300sdp</dimen>
+    <dimen name="width_iv_quizzler">@dimen/_250sdp</dimen>
+    <dimen name="height_iv_quizzler">@dimen/_100sdp</dimen>
+    <dimen name="height_iv_challenge">@dimen/_60sdp</dimen>
+    <dimen name="padding_medium">@dimen/_10sdp</dimen>
+    <dimen name="width_v_oval_about">@dimen/_150sdp</dimen>
+    <dimen name="height_v_oval_about">@dimen/_120sdp</dimen>
+    <dimen name="text_main_buttons">40sp</dimen>
+    <dimen name="margin10">@dimen/_50sdp</dimen>
+    <dimen name="text_back_button">@dimen/_25ssp</dimen>
+    <dimen name="width_back_button">@dimen/_100sdp</dimen>
+    <dimen name="height_back_button">@dimen/_80sdp</dimen>
+    <dimen name="text_medium_heading">@dimen/_20ssp</dimen>
+    <dimen name="margin_medium">@dimen/_10sdp</dimen>
+    <dimen name="padding_small">@dimen/_5sdp</dimen>
+    <dimen name="margin4">@dimen/_20sdp</dimen>
+    <dimen name="margin_small">@dimen/_5sdp</dimen>
+    <dimen name="text_choice">@dimen/_15ssp</dimen>
+</resources>

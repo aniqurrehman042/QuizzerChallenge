@@ -1,0 +1,6 @@
+<resources xmlns:https="http://schemas.android.com/apk/res-auto">
+    <string name="app_name">Quizzer Challenge</string>
+    <string name="about_text">Licensed Under Creative Commons: By Attribution 3.0</string>
+    <string name="link_text">http://creativecommons.org/licenses/by/3.0/</string>
+    <string name="freepik_link_text">https://www.freepik.com/free-photos-vectors/business</string>
+</resources>

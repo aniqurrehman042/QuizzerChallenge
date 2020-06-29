@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.openhomestudio.openhomequizzerchallenge">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".ui.AmountSelection"></activity>
+        <activity android:name=".ui.DifficultySelection" />
+        <activity android:name=".ui.QuizResult" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-4465631605480306~2684706611" />
+
+        <activity
+            android:name=".ui.Quiz"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.CategorySelection"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.About"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.MainPage"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

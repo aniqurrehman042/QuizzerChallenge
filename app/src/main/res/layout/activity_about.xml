@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.About"
+    android:background="@color/colorPrimary"
+    android:padding="@dimen/padding_medium">
+
+    <TextView
+        android:id="@+id/tv_about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/about_text"
+        android:textSize="@dimen/_20ssp"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/link_text"
+        android:textSize="@dimen/_20ssp"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_about"
+        android:autoLink="web"
+        android:linksClickable="true"/>
+
+    <TextView
+        android:id="@+id/tv_freepik_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="App Logo Business vector created by freepik - www.freepik.com"
+        android:textSize="@dimen/_20ssp"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_link"
+        android:autoLink="web"
+        android:linksClickable="true"/>
+
+    <TextView
+        android:id="@+id/tv_freepik_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/freepik_link_text"
+        android:textSize="@dimen/_20ssp"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_freepik_text"
+        android:autoLink="web"
+        android:linksClickable="true"/>
+
+    <View
+        android:id="@+id/v_oval_about"
+        android:layout_width="@dimen/width_back_button"
+        android:layout_height="@dimen/height_back_button"
+        android:background="@drawable/start_selector"
+        android:clickable="true"
+        app:layout_constraintTop_toBottomOf="@id/tv_freepik_link"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="backClick"
+        android:layout_marginTop="@dimen/margin10"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="@+id/v_oval_about"
+        app:layout_constraintStart_toStartOf="@+id/v_oval_about"
+        app:layout_constraintEnd_toEndOf="@+id/v_oval_about"
+        app:layout_constraintBottom_toBottomOf="@+id/v_oval_about"
+        android:text="BACK"
+        android:textSize="@dimen/text_back_button"
+        android:textColor="@color/white"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
